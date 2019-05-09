@@ -1,0 +1,160 @@
+*{
+    /*font-family: 'Titillium Web', sans-serif;*/
+	font-family: 'Contrail One', cursive;
+    background-color: white;
+    color:black;
+    background-color: white; 
+    overflow-x: hidden;
+}
+p, text {
+    font-size: 1.5em;
+}
+svg {
+    background: #2A3132;
+    width: 100%;
+
+    /*margin-left: 0%;
+    margin-right: 0%;*/
+    /*width: 100%;*/
+
+}
+
+h1{
+
+	text-align: center;
+	font-size: 2.5em;
+}
+
+button{
+
+	background-color: #2A3132;
+	color: white;
+	font-size: 0.8em;
+}
+
+#para{
+
+	text-align: center;
+	font-size: 22px;
+	margin-top: 1%;
+}
+
+#inorout{
+
+	width: 180px;
+	height: 80px;
+	font-size: 0.8em;
+	cursor: pointer;
+}
+
+#combine{
+
+	
+	width: 180px;
+	height: 80px;
+	font-size: 0.8em;
+	cursor: pointer;
+
+}
+
+#value{
+
+	
+	width: 180px;
+	height: 80px;
+	font-size: 0.8em;
+	cursor: pointer;
+
+}
+#bank{
+
+	
+	width: 180px;
+	height: 80px;
+	font-size: 0.8em;
+	cursor: pointer;
+
+}
+#order{
+
+	
+	width: 180px;
+	height: 80px;
+	font-size: 0.8em;
+	cursor: pointer;
+
+}
+
+#buttonapi {
+
+	width: 180px;
+	height: 80px;
+	font-size: 0.8em;
+	cursor: pointer;
+	margin: auto;
+	
+
+}
+
+ul{
+
+	text-align: center;
+	font-size: 1.5em;	
+	list-style-type: none;
+	
+}
+li{
+
+	display: inline-block;
+
+}
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 180px;					
+    height: 90px;					
+    padding: 2px;						
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+
+#in{
+
+	margin-left: 10%;
+	float: left;
+	width: 100px;
+	height: 10px;
+	text-align: center;
+}
+
+#out{
+
+	margin-right:10%;
+	float: right;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+}
+
+img{
+
+	width: 30px;
+	height: 30px;
+}
+
+#api {
+
+	margin: auto;
+    width: 20%;
+	text-align: left;
+	color: white;
+
+
+}
+
+#divContents{
+	margin: auto;
+}

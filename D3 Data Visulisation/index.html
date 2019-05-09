@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bubbles PLC</title>
+<link rel="stylesheet" type="text/css" href="companies.css">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Contrail+One|Fascinate+Inline|Kreon" rel="stylesheet">
+<link rel="icon" href="images/bubbles.ico">
+</head>  
+<body>
+
+<h1>The Worlds Biggest Public Limited Companies</h1>
+
+<div id = "element"></div>
+
+<div id="para">Every day the stock prices of the biggest companies are rapidly changing. By using this following visualisation, you are able to find out the basic information<br> about the top PLC companies including the stock symbol. Use the symbols in the search tool below to fetch real time stock data through an API call
+</div>
+
+<!-- Link to all 3 scripts used in project-->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="js/bubbles.js"></script>
+<script src="js/stocks.js"></script>
+
+<!--Buttons-->
+<div id="buttons">
+<ul>
+<li><button id = "inorout">Tech Companies</button> </li>
+<li><button id = "value">USA Companies</button> </li>
+<li><button id = "combine">Combine</button></li>
+<li><button id = "bank">Bank/Investment</button></li>
+<li><button id = "order">Order</button></li>
+</ul>
+</div>
+
+<g>
+<circle></circle>
+<text></text>
+</g>
+
+<!-- <API Search Request-->
+<div id="api">
+<p>API key: <input id=inpApiKey onchange=setStorage(); value='2MJMN0CCZKLM3H4D' ></p>
+
+	<p>Symbol: &nbsp;<input id=inpSymbol value='' ></p>
+
+	<p>
+<!-- Allow user to see what time series they want too see/ the time interval --> 
+		function:
+		<select id=selFunction onchange=setInterval();  >
+			<option>TIME_SERIES_INTRADAY</option>
+			<option>TIME_SERIES_DAILY</option>
+			<option>TIME_SERIES_DAILY_ADJUSTED</option>
+			<option>TIME_SERIES_WEEKLY</option>
+			<option>TIME_SERIES_WEEKLY_ADJUSTED</option>
+			<option>TIME_SERIES_MONTHLY</option>
+			<option>TIME_SERIES_MONTHLY_ADJUSTED</option>
+		</select>
+
+		<span id=spnInterval >
+			interval:
+			<select id=selInterval >
+					<option>1min</option>
+					<option>5min</option>
+					<option>15min</option>
+					<option>30min</option>
+					<option>60min</option>
+			</select>
+		</span>
+	</p>
+
+	<p>
+
+		output size:
+		<select id=selSize >
+			<option>compact</option>
+			<option>full</option>
+		</select>
+
+		data type:
+		<select id=selType >
+			<option>json</option>
+			<option>csv</option>
+		</select>
+
+	</p>
+<!-- Allow the user to decide what size and what data type they want to download-->
+	<p>
+		<button id="buttonapi" onclick=getAlphaVantagedata(); >Get Compnay Data</button>
+		 &nbsp; 
+		 <button id="buttonapi" onclick=saveDataToFile(); >Download</button>
+		 <br>
+	</p>
+
+	<div id = "divContents" >You may have to wait a few seconds for the data to appear.</div>
+</div>
+
+</body>
+</html>
+
+
+<!-- PHP Password: QfI0T3RJPUcmT0gA -->
